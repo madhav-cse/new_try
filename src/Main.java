@@ -10,7 +10,7 @@ public class Main {
         try{
             Connection conn = DriverManager.getConnection(url,user,pass);
             Statement stmt = conn.createStatement();
-            String qry = "SELECT * FROM customers WHERE id=1";
+            String qry = "SELECT * FROM customers";
             ResultSet rs = stmt.executeQuery(qry);
             while(rs.next()){
                 System.out.println(rs.getInt("id")+"  "+rs.getString("name"));
